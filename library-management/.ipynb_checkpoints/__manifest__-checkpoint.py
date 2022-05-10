@@ -26,6 +26,9 @@
     ],
     
     'demo': [
-        
+        'demo/book_demo.xml',
     ],
+    
+    'license': 'OPL-1',
+    'application': 'True',
 }
