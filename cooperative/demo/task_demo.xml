@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+        <record model="academy.task" id="task_01">
+            <field name="task_name">Daily meet</field>
+            <field name="description">Status meeting</field>
+            <field name="task_type">meet</field>
+            <field name="start_time">2022/05/10 9:00:00</field>
+            <field name="stop_time">2022/05/10 10:00:00</field>
+            <field name="repeatable">True</field>
+            
+        </record>
+        
+         <record model="academy.task" id="task_02">
+            <field name="task_name">Development</field>
+            <field name="description">Dev</field>
+            <field name="task_type">Work</field>
+            <field name="start_time">2022/05/10 10:00:00</field>
+            <field name="stop_time">2022/05/10 15:00:00</field>
+            <field name="repeatable">True</field>
+            
+        </record>
+        
+         <record model="academy.task" id="task_03">
+            <field name="task_name">Documentation</field>
+            <field name="description">Technical Docs</field>
+            <field name="task_type">Cloud</field>
+            <field name="start_time">2022/05/10 15:00:00</field>
+            <field name="stop_time">2022/05/10 17:00:00</field>
+            <field name="repeatable">True</field>
+            
+        </record>
+     
+    </data>
+</odoo>

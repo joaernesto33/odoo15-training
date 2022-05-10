@@ -26,6 +26,10 @@
     ],
     
     'demo': [
+        'demo/spaceship_demo.xml',
         
     ],
+    
+    'license': 'OPL-1',
+    'application': 'True',
 }
