@@ -22,7 +22,9 @@
     'depends': ['base'],
     
     'data': [
-        
+        'security/cooperative_security.xml',
+        'security/ir.model.access.csv',
+        'views/cooperative_menuitems.xml',
     ],
     
     'demo': [
