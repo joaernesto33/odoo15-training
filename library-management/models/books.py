@@ -17,3 +17,5 @@ class Book(models.Model):
     isbn = fields.Char(string='ISBN')
     genre = fields.Char(string='Genre')
     
+    notes = fields.Text(string="Notes")
+    
