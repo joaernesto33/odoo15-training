@@ -22,7 +22,9 @@
     'depends': ['base'],
     
     'data': [
-        
+        'security/space_security.xml',
+        'security/ir.model.access.csv',
+        'views/space_menuitems.xml',
     ],
     
     'demo': [

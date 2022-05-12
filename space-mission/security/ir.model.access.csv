@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+spaceship_admin,spaceship admin,model_academy_spaceship,group_space_admin,1,1,1,1
+spaceship_sc,spaceship crew,model_academy_spaceship,group_space_sc,1,1,1,0
+spaceship_gu,spaceship general user,model_academy_spaceship,group_space_gu,1,0,0,0
