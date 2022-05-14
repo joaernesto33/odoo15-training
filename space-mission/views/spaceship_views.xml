@@ -12,6 +12,8 @@
                             <group>
                                 <field name="ship_dimensions"/>
                                 <field name="fuel_type"/>
+                                <field name="width"/>
+                                <field name="length"/>
                             </group>
                             <group>
                                 <field name="ship_type"/>

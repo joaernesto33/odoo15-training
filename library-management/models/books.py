@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-*
 
 from odoo import models, fields, api, _
+from odoo.exceptions import ValidationError
 
 class Book(models.Model):
     
@@ -18,4 +19,11 @@ class Book(models.Model):
     genre = fields.Char(string='Genre')
     
     notes = fields.Text(string="Notes")
+    
+    @api.onchange('isbn')
+    def _onchange_isbn(self):
+        if len(self.isbn) != 13:
+            raise ValidationError(f'The ISBN must be 13 characters long')
+            
+        
     

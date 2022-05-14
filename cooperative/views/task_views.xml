@@ -17,10 +17,16 @@
                         </group>
                         
                         <group>
-                            <field name="task_name"/>
-                            <field name="description"/>
-                            <field name="task_type"/>
-                            <field name="repeatable"/>
+                            <group>
+                                <field name="task_name"/>
+                                <field name="description"/>
+                                <field name="task_type"/>
+                                <field name="repeatable"/>
+                            </group>
+                            <group>
+                                <field name="leader_name"/>
+                                <field name="task_state"/>
+                            </group>
                         </group>
                         
                     </sheet>

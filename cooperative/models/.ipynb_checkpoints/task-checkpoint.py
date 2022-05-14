@@ -16,6 +16,20 @@ class Task(models.Model):
     
     repeatable = fields.Boolean(string='Repeatable', default=True)
     
+    task_state = fields.Selection(string='State', selection=[('draft', 'Draft'),
+                                                             ('ready', 'Ready'),
+                                                             ('inprogress', 'In-progress'),
+                                                             ('done', 'Done')])
+    
+    leader_name = fields.Char(string="Leader's Name")
+    
+    @api.onchange('leader_name')
+    def _onchange_leader(self):
+        if self.leader_name == "":
+            self.task_state = 'draft'
+        else:
+            self.task_state = 'ready'
+    
     
     
     
