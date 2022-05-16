@@ -20,10 +20,15 @@ class Book(models.Model):
     
     notes = fields.Text(string="Notes")
     
+    rental_id = fields.Many2one(comodel_name='academy.rental',
+                               string='Rental',
+                               ondelete='cascade')
+    
     @api.onchange('isbn')
     def _onchange_isbn(self):
-        if len(self.isbn) != 13:
-            raise ValidationError(f'The ISBN must be 13 characters long')
+        if self.isbn:
+            if len(self.isbn) != 13:
+                raise ValidationError(f'The ISBN must be 13 characters long')
             
         
     

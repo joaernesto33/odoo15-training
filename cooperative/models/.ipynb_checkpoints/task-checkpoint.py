@@ -23,6 +23,8 @@ class Task(models.Model):
     
     leader_name = fields.Char(string="Leader's Name")
     
+    task_volunteers = fields.Many2many(comodel_name='res.partner', string='Volunteers')
+    
     @api.onchange('leader_name')
     def _onchange_leader(self):
         if self.leader_name == "":

@@ -29,6 +29,12 @@
                             </group>
                         </group>
                         
+                        <notebook>
+                            <page string="Volunteers">
+                                <field name="task_volunteers"/>
+                            </page>
+                        </notebook>
+                        
                     </sheet>
                 </form>
             </field>
