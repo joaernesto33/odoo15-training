@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<odoo><!--
     <data>
         <record model="ir.actions.act_window" id="course_list_action">
             <field name="name">Courses</field>
@@ -31,5 +31,5 @@
         
         <menuitem id="menu_academy_sessions" name="Sessions" parent="menu_academy_sub" sequence="4" action="session_list_action"/>
         
-    </data>
+    </data>-->
 </odoo>

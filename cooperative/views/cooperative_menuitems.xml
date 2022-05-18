@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<odoo><!--
     <data>
         <record model="ir.actions.act_window" id="cooperative_list_action">
             <field name="name">Tasks</field>
@@ -18,5 +18,5 @@
         
         <menuitem name="Task" id="menu_cooperative_task" parent="menu_cooperative_sub" sequence="3" action="cooperative_list_action"/>
         
-    </data>
+    </data>-->
 </odoo>

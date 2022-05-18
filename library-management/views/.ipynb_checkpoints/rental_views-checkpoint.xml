@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<odoo><!--
     <data>
         <record model="ir.ui.view" id="rental_view_form">
             <field name="name">academy.rental.form</field>
@@ -45,7 +45,7 @@
                     <field name="customer_id" string="Customer Name"/>
                 </map>
             </field>
-        </record>
+        </record> 
         
-    </data>
+    </data>-->
 </odoo>
