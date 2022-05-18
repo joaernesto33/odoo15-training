@@ -63,6 +63,19 @@
         </record>
         
         
+        <record model="ir.ui.view" id="task_view_gantt">
+            <field name="name">academy.task.gantt</field>
+            <field name="model">academy.task</field>
+            <field name="arch" type="xml">
+                <gantt default_group_by="leader_name"
+                       date_start="start_time"
+                       date_stop="stop_time"
+                       >
+                </gantt>
+            </field>
+        </record>
+        
+        
     </data>
     
 </odoo>

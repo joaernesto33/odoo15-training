@@ -21,7 +21,11 @@ class Task(models.Model):
                                                              ('inprogress', 'In-progress'),
                                                              ('done', 'Done')])
     
-    leader_name = fields.Char(string="Leader's Name")
+    #leader_name = fields.Char(string="Leader's Name")
+    leader_name = fields.Many2one(comodel_name='res.partner',
+                               string='Leader Name',
+                               ondelete='cascade',
+                               required=True)
     
     task_volunteers = fields.Many2many(comodel_name='res.partner', string='Volunteers')
     

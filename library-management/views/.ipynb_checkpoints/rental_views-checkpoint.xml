@@ -34,5 +34,18 @@
             </field>
         
         </record>
+        
+        
+         
+        <record model="ir.ui.view" id="rental_view_map">
+            <field name="name">academy.rental.map</field>
+            <field name="model">academy.rental</field>
+            <field name="arch" type="xml">
+                <map res_partner="customer_id">
+                    <field name="customer_id" string="Customer Name"/>
+                </map>
+            </field>
+        </record>
+        
     </data>
 </odoo>

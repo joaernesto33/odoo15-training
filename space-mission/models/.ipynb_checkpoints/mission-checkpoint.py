@@ -16,3 +16,7 @@ class Mission(models.Model):
     return_date = fields.Datetime(string='Return Date', required=True)
     
     crew_members = fields.Many2many(comodel_name='res.partner', string='Crew Members')
+    
+    fuel_amount = fields.Float(string="Amount of Fuel")
+    engines = fields.Integer(string="Number of Engines")
+    safety_features = fields.Integer(string="Safety Features")
