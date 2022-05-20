@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo><!--
+<odoo>
     <data noupdate="1">
         <record model="academy.book" id="book_01">
             <field name="name">Un mundo para mi prima</field>
@@ -58,5 +58,5 @@
         
        
     
-    </data>-->
+    </data>
 </odoo>

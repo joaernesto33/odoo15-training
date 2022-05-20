@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo><!--
+<odoo>
     <data noupdate="1">
         <record model="academy.course" id="erp_101">
             <field name="name">ERP 101</field>
@@ -22,5 +22,5 @@
             <field name="description"></field>
             <field name="level">advanced</field>
         </record>
-    </data>-->
+    </data>
 </odoo>

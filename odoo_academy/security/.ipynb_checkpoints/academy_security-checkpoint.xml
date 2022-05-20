@@ -14,4 +14,5 @@
         <field name="model_id" ref="model_academy_course"/>
     
     </record>
+   
 </odoo>

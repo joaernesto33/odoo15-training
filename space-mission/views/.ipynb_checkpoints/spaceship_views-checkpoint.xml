@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo><!--
+<odoo>
     <data>
         <record model="ir.ui.view" id="spaceship_view_form">
             <field name="name">academy.spaceship.form</field>
@@ -42,6 +42,6 @@
    
         
         
-    </data>-->
+    </data>
     
 </odoo>
