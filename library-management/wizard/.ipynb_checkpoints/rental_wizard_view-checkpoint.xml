@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="academy_rental_wizard_form_view">
+            <field name="name">academy.rental.wizard.form</field>
+            <field name="model">academy.rental.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Show rentals for Book">
+                    <group>
+                        <field name="book_id"/>
+                        <field name="customer_id"/>
+                        
+                        <field name="rental_ids" domain="[('customer_id', '=', customer_id),('books_ids', '=', book_id)]"/>
+                    </group>
+                    <footer>
+                        <button special="cancel" string="Close"/>
+                    </footer>
+                </form>
+            </field>
+        
+        </record>
+        
+        <act_window id="launch_rental_wizard"
+                    name="Show rentals"
+                    binding_model="academy.book"
+                    res_model="academy.rental.wizard"
+                    view_mode="form"
+                    target="new"/>
+        
+    </data>
+</odoo>

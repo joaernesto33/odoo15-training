@@ -27,6 +27,7 @@
         'views/library_menuitems.xml',
         'views/book_views.xml',
         'views/rental_views.xml',
+        'wizard/rental_wizard_view.xml',
     ],
     
     'demo': [

@@ -37,6 +37,8 @@ class Task(models.Model):
             self.task_state = 'ready'
     
     
+    approval_id = fields.Many2one(comodel_name='approval.request',
+                                 string='Approval')
     
     
     

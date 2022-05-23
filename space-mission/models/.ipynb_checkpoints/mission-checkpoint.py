@@ -20,3 +20,5 @@ class Mission(models.Model):
     fuel_amount = fields.Float(string="Amount of Fuel")
     engines = fields.Integer(string="Number of Engines")
     safety_features = fields.Integer(string="Safety Features")
+    
+    project_ids = fields.One2many(comodel_name = 'project.project', inverse_name = 'mission_id', string = 'Projects')

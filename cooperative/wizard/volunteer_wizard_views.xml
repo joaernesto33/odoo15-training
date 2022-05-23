@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="volunteer_wizard_form_view">
+            <field name="name">volunteer.wizard.form</field>
+            <field name="model">academy.volunteer.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Create Task for Volunteer">
+                    <group>
+                        <field name="volunteer_id"/>
+                        <field name="task_ids"/>
+                    </group>
+                    <footer>
+                        <button name="write_task" type="object"
+                                string="Assign" class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        
+        </record>
+        
+        <act_window id="launch_sale_wizard"
+                    name="Assign Task"
+                    binding_model="res.partner"
+                    res_model="academy.volunteer.wizard"
+                    view_mode="form"
+                    target="new"/>
+        
+    </data>
+</odoo>

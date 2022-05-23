@@ -4,3 +4,6 @@ library_customer,book customer,model_academy_book,group_library_customer,1,0,0,0
 
 rental_admin,rental admin,model_academy_rental,group_library_librarian,1,1,1,1
 rental_read,rental read,model_academy_rental,group_library_customer,1,0,0,0
+
+wizard_rental_admin,wizard rental admin,model_academy_rental_wizard,group_library_librarian,1,1,1,1
+copy_rental_admin,copy rental admin,model_book_copy,group_library_librarian,1,1,1,1

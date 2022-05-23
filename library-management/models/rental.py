@@ -12,7 +12,7 @@ class Rental(models.Model):
                                ondelete='cascade',
                                required=True)
     
-    books_ids = fields.One2many(comodel_name = 'academy.book', inverse_name = 'rental_id', string = 'Books')
+    books_ids = fields.One2many(comodel_name = 'book.copy', inverse_name = 'rental_id', string = 'Books')
     
     
     

@@ -19,13 +19,16 @@
     'category': 'Training',
     'version': '0.1',
     
-    'depends': ['base'],
+    'depends': ['base','approvals'],
     
     'data': [
         'security/cooperative_security.xml',
         'security/ir.model.access.csv',
         'views/cooperative_menuitems.xml',
         'views/task_views.xml',
+        'views/approval_views_inherit.xml',
+        'wizard/volunteer_wizard_views.xml',
+        'views/partner_views.xml',
     ],
     
     'demo': [

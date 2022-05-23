@@ -4,4 +4,5 @@ spaceship_sc,spaceship-crew,model_academy_spaceship,group_space_sc,1,1,1,0
 spaceship_gu,spaceship-general-user,model_academy_spaceship,group_space_gu,1,0,0,0
 mission_admin,mission-admin,model_academy_mission,group_space_admin,1,1,1,1
 mission_read,mission-read,model_academy_mission,group_space_gu,1,0,0,0
+wizard_project_admin,wizard-project-admin,model_academy_project_wizard,group_space_admin,1,1,1,1
 

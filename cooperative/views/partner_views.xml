@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <record model="ir.ui.view" id="volunteer_view_list">
+            <field name="name">academy.volunteer.list</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Volunteers List">
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="volunteer_view_search">
+            <field name="name">academy.volunteer.search</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="email"/>
+                </search>
+            </field>
+        </record>
+    
+    
+    
+    </data>
+</odoo>

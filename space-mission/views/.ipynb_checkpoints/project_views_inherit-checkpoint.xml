@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_project_form_inherit_academy">
+            <field name="name">project.form.inherit.academy</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='alias_name']" position="after">
+                    <field name="mission_id"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

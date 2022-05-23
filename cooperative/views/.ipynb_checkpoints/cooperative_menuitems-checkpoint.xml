@@ -12,11 +12,24 @@
             </field>
         </record>
         
+        <record model="ir.actions.act_window" id="volunteer_list_action">
+            <field name="name">Volunteers</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">list</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smilling_face">
+                    Create the first task
+                </p>
+            </field>
+        </record>
+        
         <menuitem name="Cooperative Volunteers" id="menu_cooperative" sequence="1" />
         
         <menuitem name="Cooperative Volunteers" id="menu_cooperative_sub" parent="menu_cooperative" sequence="2"/>
         
         <menuitem name="Task" id="menu_cooperative_task" parent="menu_cooperative_sub" sequence="3" action="cooperative_list_action"/>
+        
+        <menuitem name="Volunteers" id="menu_cooperative_volunteer" parent="menu_cooperative_sub" sequence="4" action="volunteer_list_action"/>
         
     </data>
 </odoo>
