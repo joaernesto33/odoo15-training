@@ -18,6 +18,8 @@ class Spaceship(models.Model):
     ship_type = fields.Char(string='Ship type')
     number_passengers = fields.Integer(string='Number of Passengers', required=True)
     
+    mission_ids = fields.One2many(comodel_name = 'academy.mission', inverse_name = 'spaceship_id', string = 'Missions')
+    
     
     active = fields.Boolean(string='Active', default=True)
     

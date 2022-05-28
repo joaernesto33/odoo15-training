@@ -19,7 +19,7 @@
     'category': 'Training',
     'version': '0.1',
     
-    'depends': ['base'],
+    'depends': ['base','website'],
     
     'data': [
         'security/library_security.xml',
@@ -28,6 +28,7 @@
         'views/book_views.xml',
         'views/rental_views.xml',
         'wizard/rental_wizard_view.xml',
+        'views/library_web_templates.xml',
     ],
     
     'demo': [

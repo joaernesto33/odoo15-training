@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="books_website">
+            <t t-call="website.layout">
+                <t t-set="title">Library</t>
+                <div class="container">
+                    <h1>Books</h1>
+                    <t t-foreach="books" t-as="book">
+                        <div t-if="book.rental_id == 'False'">
+                            <h3>
+                                <t t-esc="book.name"/>
+                            </h3>
+                            <p>Authors:
+                                <span t-field="book.authors"/>
+                            </p>
+
+                            <p>Editors:
+                                <span t-field="book.editors"/>
+                            </p>
+                            <p>ISBN:
+                                <span t-field="book.isbn"/>
+                            </p>
+                            <p>Editon Year:
+                                <span t-field="book.edition_year"/>
+                            </p>
+                        </div>
+                        
+                    </t>
+                </div>
+            </t>
+        </template>
+        
+    </data>
+</odoo>

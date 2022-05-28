@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="report_task"
+            model="res.partner"
+            string="Volunteer Report"
+            name="cooperative.report_volunteers_document"
+            file="cooperative.report_volunteers"
+            report_type="qweb-html"/>
+    
+    <template id="report_volunteers_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2 t-field="doc.name" class="mt16"/>
+                        <div class="row mt32 mb32" id="spaceship_info">
+                            <div class="col-auto mw-100 mb-2">
+                                <strong>Volunteer Information</strong>
+                                <t t-if="doc.phone">
+                                    <span t-field="doc.phone"/>
+                                </t>
+                                <t t-if="doc.email">
+                                    <span t-field="doc.email"/>
+                                </t>
+                            </div>
+                        </div>
+                        <h4>Tasks</h4>
+                        <table class="table table-sm o_main_table">
+                            <thead>
+                                <tr>
+                                    <th name="th_name">Name</th>
+                                    <th name="th_type">Task Type</th>
+                                    <th name="th_state">Task State</th>
+                                    <th name="th_start">Start Time</th>
+                                    <th name="th_stop">TStop Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.tasks_ids" t-as="task">
+                                    <tr>
+                                        <td t-if="task.task_name" name="td_task_name">
+                                            <span t-field="task.task_name"/>
+                                        </td>
+                                        <td t-if="task.task_type" name="td_task_type">
+                                            <span t-field="task.task_type"/>
+                                        </td>
+                                        <td t-if="task.task_state" name="td_task_state">
+                                            <span t-field="task.task_state"/>
+                                        </td>
+                                        <td t-if="task.start_time" name="td_task_start">
+                                            <span t-field="task.start_time"/>
+                                        </td>
+                                        <td t-if="task.stop_time" name="td_task_stop">
+                                            <span t-field="task.stop_time"/>
+                                        </td>
+                                        
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        
+                        
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    
+</odoo>

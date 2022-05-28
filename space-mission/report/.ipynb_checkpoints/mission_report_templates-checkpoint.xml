@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="report_spaceship"
+            model="academy.spaceship"
+            string="Spaceship Report"
+            name="space-mission.report_spaceship_document"
+            file="space-mission.report_spaceship"
+            report_type="qweb-html"/>
+    
+    <template id="report_spaceship_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2 t-field="doc.name" class="mt16"/>
+                        <div class="row mt32 mb32" id="spaceship_info">
+                            <div class="col-auto mw-100 mb-2">
+                                <strong>Spaceship Information</strong>
+                                <t t-if="doc.ship_dimensions">
+                                    <span t-field="doc.ship_dimensions"/>
+                                </t>
+                                <t t-if="doc.width">
+                                    <span t-field="doc.width"/>
+                                </t>
+                                <t t-if="doc.length">
+                                    <span t-field="doc.length"/>
+                                </t>
+                            </div>
+                            
+                            <div t-if="doc.fuel_type" class="col-auto mw-100 mb-2">
+                                <span t-field="doc.fuel_type"/>
+                            </div>
+                            <div t-if="doc.ship_type" class="col-auto mw-100 mb-2">
+                                <span t-field="doc.ship_type"/>
+                            </div>
+                            <div t-if="doc.number_passengers" class="col-auto mw-100 mb-2">
+                                <span t-field="doc.number_passengers"/>
+                            </div>
+                            
+                        </div>
+                        <h4>Missions</h4>
+                        <table class="table table-sm o_main_table">
+                            <thead>
+                                <tr>
+                                    <th name="th_name">Name</th>
+                                    <th name="th_launch">Launch Date</th>
+                                    <th name="th_return">Return Date</th>
+                                    <th name="th_safety">Safety Features</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.mission_ids" t-as="mission">
+                                    <tr>
+                                        <td t-if="mission.mission_name" name="td_mission_name">
+                                            <span t-field="mission.mission_name"/>
+                                        </td>
+                                        <td t-if="mission.launch_date" name="td_launch_date">
+                                            <span t-field="mission.launch_date"/>
+                                        </td>
+                                        <td t-if="mission.return_date" name="td_return_date">
+                                            <span t-field="mission.return_date"/>
+                                        </td>
+                                        <td t-if="mission.safety_features" name="td_safety_features">
+                                            <span t-field="mission.safety_features"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        
+                        
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    
+</odoo>
